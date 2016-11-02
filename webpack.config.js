@@ -16,13 +16,13 @@ var TARGET_ENV = process.env.npm_lifecycle_event === 'build' ? 'production' : 'd
 var commonConfig = {
 
   output: {
-    path: path.resolve(__dirname, 'docs/'),
-    filename: '[hash].js',
+    path: path.resolve(__dirname, 'dist/'),
+    filename: '[hash].js'
   },
 
   resolve: {
     modulesDirectories: ['node_modules'],
-    extensions: ['', '.js', '.elm'],
+    extensions: ['', '.js', '.elm']
     
   },
 
@@ -48,7 +48,7 @@ var commonConfig = {
       { from: 'src/static/images/', to: '/static/images/' },
       { from: 'src/static/favicon.ico' },
       { from: 'src/static/manifest.json', to: '/static/' },
-      { from: 'src/static/service-worker.js', to: '/' },
+      { from: 'src/static/service-worker.js', to: '/' }
     ]),
     new HtmlWebpackPlugin({
       template: 'src/static/index.html',
@@ -69,7 +69,7 @@ var commonConfig = {
       })
   ],
 
-  postcss: [autoprefixer({ browsers: ['last 2 versions'] })],
+  postcss: [autoprefixer({ browsers: ['last 2 versions'] })]
 
 }
 
@@ -79,6 +79,12 @@ if (TARGET_ENV === 'development') {
 
   module.exports = merge(commonConfig, {
     watch: true,
+
+    output: {
+      path: 'src/static/',
+      publicPath: '/'
+    },
+
     entry: [
       'webpack-dev-server/client?http://localhost:8080',
       path.join(__dirname, 'src/static/index-dev.js')

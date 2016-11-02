@@ -1,3 +1,22 @@
 @import '~semantic-ui/dist/semantic.css';
 
 @import './fork-button';
+@import './order-item-counter';
+
+h1 {
+  margin-left: 20px;
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.orderDetailList {
+  font-size: 20px;
+  margin-left: 50px;
+}

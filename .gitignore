@@ -88,3 +88,7 @@ elm-stuff/
 # elm-repl generated files
 repl-temp-*
 
+dist/
+.idea
+semantic/
+semantic.json

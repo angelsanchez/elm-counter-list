@@ -1,0 +1,36 @@
+
+.orderItemCounter {
+  display: inline-block;
+  margin: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+  width: 200px;
+  vertical-align: top;
+}
+
+.orderItemCounter > img {
+  height: 80px;
+}
+.orderItemCounter > .name {
+  font-family: 'monospace';
+  height: 40px;
+}
+
+.orderItemCounter > .count {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #000;
+  color: #fff;
+  font-family: 'monospace';
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.orderItemCounter > button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  margin: 10px 0 10px 10px;
+  width: 30px;
+  height: 30px;
+}
